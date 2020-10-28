@@ -3,13 +3,13 @@ import Tmdb from '../src/Tmdb';
 
 export default () => {
 
-  const [movieList, setMovieList] = useState([]);
+  
 
   useEffect(() => {
     const loadAll = async () => {
       //Pegando a lista Total
       let list = await Tmdb.getHomeList();
-      setMovieList(list);
+      console.log(list);
     }
 
     loadAll();
